@@ -1,0 +1,197 @@
+/* 公用css common */
+body{
+    font-family: "Microsoft YaHei",sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+a{
+    color: #333;
+}
+a:hover{
+    color: #333;
+    text-decoration: none;
+}
+/* 定义自定义的字体 */
+@font-face{
+    font-family: itheima;
+    src: url()format('embedded-opentype'),
+    url()format('svg'),
+    url()format('truetype'),
+    url()format('woff');
+}
+/* 应用自定义字体 */
+.heima_icon{
+    font-family: itheima;
+}
+.heima_icon_phone::before{
+    content: "\e908"
+}
+.heima_icon_tel::before{
+    content: "\909";
+}
+/* 顶部通栏 */
+.heima_topBar{
+    border: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+    position: relative;
+    z-index: 1001;
+}
+.heima_topBar a{
+    color: #666;
+}
+.heima_topBar a:hover{
+    color: #666;
+}
+/* + ~ */
+.heima_topBar>.container>.row>div{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.heima_topBar>.container>.row>div+div{
+    border-left: 1px solid #ccc;
+}
+/* 二维码的位置显示、隐藏 */
+.heima_app{
+    position: relative;
+    display: block;
+}
+.heima_app img{
+    display: none;
+}
+.heima_app:hover img{
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-left: -60px;
+}
+/* 注册按钮 */
+.heima_topBar .btn-register{
+    background: #E92322;
+    color:#fff;
+    padding: 3px 15px;
+}
+.heima_topBar.btn-register:hover{
+    color: #fff;
+    border-color: #E92322;
+}
+/* 登录按钮 */
+.heima_topBar .btn-login:hover{
+    text-decoration: none;
+}
+/* 导航栏 */
+/* 设置整个导航栏的背景色、下边框等 */
+.heima_nav{
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0;
+}
+.heima_nav .navbar-brand{
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.heima_nav .navbar-brand:hover,
+.heima_nav .navbar-brand:focus{
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.heima_nav .navbar-text{
+    color: #777;
+}
+/* 设置导航栏每个菜单的样式 */
+.heima_nav .navbar-nav>li>a{
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.heima_nav .navbar-nav>li>a:hover,
+.heima_nav .navbar-nav>li>a:focus{
+    color:#333;
+    background-color: transparent;
+    border-bottom: 3px solid #E92322;
+}
+/* 设置活动菜单和非活动菜单的样式 */
+.heima_nav .navbar-nav>.active>a,
+.heima_nav .navbar-nav>.active>a:hover,
+.heima_nav .navbar-nav>.active>a:focus{
+    color: #555;
+    background-color: #fff;
+    border-bottom: 3px solid #E92322;
+}
+.heima_nav .navbar-nav>.disabled>a,
+.heima_nav .navbar-nav>.disabled>a:hover,
+.heima_nav .navbar-nav>.disabled>a:focus{
+    color: #ccc;
+    background-color: transparent;
+}
+/* 设置汉堡按钮的样式 */
+.heima_nav .navbar-toggle{
+    border-color: #ddd;
+    margin-top:23px;
+    margin-bottom: 23px;
+}
+.heima_nav .navbar-toggle:hover,
+.heima_nav .navbar-toggle:focus{
+    background-color: #ddd;
+}
+.heima_nav .navbar-toggle .icon-bar{
+    background-color: #888;
+}
+.heima_nav .navbar-collapse,
+.heima_nav .navbar-form{
+    border-color: #e7e7e7;
+}
+.heima_nav .navbar-nav>.open>a,
+.heima_nav .navbar-nav>.open>a:hover,
+.heima_nav .navbar-nav>.open>a:focus{
+    color: #555;
+    background-color: #e7e7e7;
+}
+/* 当屏幕小于或等于767px时菜单的样式 */
+@media(max-width:767px){
+    .heima_nav .navbar-nav .open .dropdown-menu>li>a{
+        color: #777;
+    }
+    .heima_nav .navbar-nav .open .dropdown-menu>li>a:hover,
+    .heima_nav .navbar-nav .open .dropdown-menu>li>a:focus{
+        color:#333;
+        background-color: transparent;
+    }
+    .heima_nav .navbar-nav .open .dropdown-menu>.active>a,
+    .heima_nav .navbar-nav .open .dropdown-menu>.active>a:hover,
+    .heima_nav .navbar-nav .open .dropdown-menu>.active>a:focus{
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a,
+    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a:hover,
+    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a:focus{
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.heima_nav .navbar-link{
+    color:#777;
+}
+.heima_nav .navbar-link:hover{
+    color: #333;
+}
+.heima_nav .btn-link{
+    color:#777;
+}
+.heima_nav .btn-link:hover,
+.heima_nav .btn-link:focus{
+    color:#333;
+}
+.heima_nav .btn-link[disabled]:hover,
+fieldset[disabled] .heima_nav .btn-link:hover,
+.heima_nav .btn-link[disabled]:focus,
+fieldset[disabled] .heima_nav .btn-link:focus{
+    color: #ccc;
+}
